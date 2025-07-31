@@ -28,6 +28,11 @@ module SPI_slave(
         else begin 
             case (state)
                 IDEL: begin
+                    count <= 4'b0;
+                    rx_valid <= 1'b0;
+                    rx_data <= 10'b0;
+                    MISO <= 1'b0;
+
                     if(!SS_n) 
                         state <= CHK_CMD;
                     else 
