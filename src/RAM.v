@@ -10,7 +10,7 @@ module RAM #(
     output reg tx_valid // high in read case only
 );
 
-reg [ADDR_SIZE - 1:0] mem [0:MEM_DEPTH - 1]; // memort declaration
+reg [7:0] mem [0:MEM_DEPTH - 1]; // memort declaration
 reg [ADDR_SIZE - 1:0] WR_ADDR, RD_ADDR; // to hold the write and read address
 
 
@@ -45,10 +45,6 @@ always @(posedge clk, negedge rst_n) begin
                 tx_valid <= 1;
             end
         endcase
-    end
-    else 
-    begin
-        tx_valid <= 0;
-    end
+    end 
 end
 endmodule
