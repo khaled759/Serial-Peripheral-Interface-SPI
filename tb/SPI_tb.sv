@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module SPI_Wrapper_tb();
+module SPI_tb();
 
     // Testbench signals
     reg clk;
