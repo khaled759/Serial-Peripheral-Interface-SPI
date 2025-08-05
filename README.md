@@ -52,13 +52,12 @@ A synchronous RAM that stores data.
 Supports read and write operations based on the address provided.
 
 
+![Block diagram showing the interaction between the SPI slave and RAM modules](images/image.png)
 
-[Insert Block Diagram Here]
 
-Caption: Block diagram showing the interaction between the SPI slave and RAM modules.
-[Insert State Machine Diagram Here]
+![State machine diagram detailing the operation of the SPI slave module](images/image-1.png)
 
-Caption: State machine diagram detailing the operation of the SPI slave module.
+
 ## Operation
 
 The SPI slave interprets 10-bit data frames from the SPI master, where the two most significant bits indicate the command:
